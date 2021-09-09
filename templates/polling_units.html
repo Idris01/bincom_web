@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Polling Unit</th>
+        <th scope="col">ACN</th>
+        <th scope="col">ANPP</th>
+        <th scope="col">CDC</th>
+        <th scope="col">DPP</th>
+        <th scope="col">JP</th>
+        <th scope="col">LABO</th>
+        <th scope="col">PDP</th>
+        <th scope="col">PPA</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+      <tr>
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.ACN_score}}</td>
+        <td>{{item.ANPP_score}}</td>
+        <td>{{item.CDC_score}}</td>
+        <td>{{item.DPP_score}}</td>
+        <td>{{item.JP_score}}</td>
+        <td>{{item.LABO_score}}</td>
+        <td>{{item.PDP_score}}</td>
+        <td>{{item.PPA_score}}</td>
+        
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>

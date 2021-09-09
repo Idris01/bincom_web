@@ -1,0 +1,25 @@
+{% extends 'layout.html'%}
+
+{% block title %}
+<title>homepage</title>
+{% endblock %}
+    
+{% block main %}
+<h2 class="text-success text-center">Local Government Result Page</h>
+    <form action="" method="post">
+        <div class="form-group mt-5">
+            <select class="form-select w-25 d-inline " aria-label="Default select example">
+                <option value="0" selected disabled>Select a Local Government Area</option>
+                {% for item in lga_data %}
+                <option value="{{item.lga_id}}">{{item.lga_name}}</option>
+                {% endfor %}
+              </select>
+            <input class="btn btn-primary btn-md" type="submit" value="Display Results">
+        </div>
+        
+    </form>
+
+    <div class="jumbotron w-75 bg-dark">
+        
+    </div>
+{% endblock %}
