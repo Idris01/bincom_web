@@ -127,6 +127,13 @@ class Party(models.Model):
     
     def __str__(self):
         return "%s" % (self.partyname)
+    
+    def serialized(self):
+        data={
+            'party_id':self.partyid,
+            'party_name':self.partyname
+        }
+        return data
 
 class PollingUnit(models.Model):
     uniqueid = models.AutoField(primary_key=True)

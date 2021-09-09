@@ -25,6 +25,16 @@
         
         <!-- Main Contents Here-->
         <main>
+            {% if msg %}
+            <!-- displays any info -->
+            <h5><span class="text-success">{{ msg}}</span></h5>
+            {% endif %}
+
+            {% if error %}
+            <!-- displays any info -->
+            <h5><span class="text-danger">{{error}}</span></h5>
+            
+            {% endif %}
             {% block main %}
         
             {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'layout.html'%}
+
+{% block title %}
+<title>new_result</title>
+{% endblock %}
+    
+{% block main %}
+
+<h2 class="text-success text-center">Upload Polls</h>
+    <div class="container d-flex justify-content-center">
+        <form action="" method="post">
+            <div class="input-group w-100 mt-5">
+                <span class="input-group-text">Enter Polling Unit</span>
+                <input type="text" aria-label="Polling Unit" class="form-control" required>
+              </div>
+
+              {% for party in party_data %}
+              <div class="input-group w-75 mt-5">
+                <span class="input-group-text f-3">{{party.party_name}}</span>
+                <input  type="text" aria-label="Polling Unit" class="form-control" placeholder="" required>
+              </div>
+              {% endfor %}
+
+              <input class="btn btn-success mt-5" type="submit" value="Upload">
+        </form>
+    </div>
+
+{% endblock %}
